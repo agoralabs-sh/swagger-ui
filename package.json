@@ -1,0 +1,90 @@
+{
+  "name": "@agoralabs-sh/swagger-ui",
+  "version": "1.0.0",
+  "description": "A Swagger UI implementation that can deployed as a static site and parses a remote Swagger JSON.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "CONTRIBUTING.md",
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agoralabs-sh/swagger-ui"
+  },
+  "author": {
+    "name": "Kieran O'Neill",
+    "email": "hello@kieranoneill.com",
+    "url": "https://github.com/kieranroneill"
+  },
+  "license": "MIT",
+  "keywords": [
+    "swagger",
+    "documentation"
+  ],
+  "private": true,
+  "engines": {
+    "node": ">=18.20.3"
+  },
+  "scripts": {
+    "build": "yarn clean && cross-env TS_NODE_PROJECT=\"webpack/tsconfig.json\" webpack --config webpack/webpack.config.ts --env environment=production",
+    "clean": "shx rm -rf dist",
+    "env": "cp -u .env.example .env",
+    "lint": "eslint . --ext .ts --ext .js",
+    "prepare": "husky install && yarn env",
+    "prettier": "prettier --config .prettierrc --write \"**/*.{js,json,jsx,ts,tsx}\"",
+    "start": "cross-env TS_NODE_PROJECT=\"webpack/tsconfig.json\" webpack serve --config webpack/webpack.config.ts --env environment=development",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/swagger-ui-react": "^4.18.3",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "handlebars": "^4.7.8",
+    "handlebars-loader": "^1.7.3",
+    "html-webpack-plugin": "^5.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.7",
+    "semantic-release": "^23.0.0",
+    "shx": "^0.3.4",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "ts-patch": "^3.1.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "typescript": "^5.4.5",
+    "typescript-transform-paths": "^3.4.7",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "stream-browserify": "^3.0.0",
+    "swagger-ui": "^5.17.14",
+    "swagger-ui-react": "^5.17.14"
+  }
+}

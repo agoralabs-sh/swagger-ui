@@ -1,0 +1,28 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "A Meaningful API",
+    "contact": {
+      "name": "Agora Labs Support",
+      "email": "support@agoralabs.sh"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/agoralabs-sh/swagger-ui/blob/main/LICENSE"
+    },
+    "version": "1.0"
+  },
+  "paths": {
+    "/hello": {
+      "get": {
+        "description": "hello humie",
+        "summary": "hello",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
