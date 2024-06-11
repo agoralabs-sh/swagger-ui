@@ -76,6 +76,7 @@ $ yarn start
 |------------------|--------------------------------------------------------------------------------------------|
 | `yarn build`     | Builds the source code into the `dist/` directory.                                         |
 | `yarn clean`     | Deletes the `dist/` directory.                                                             |
+| `yarn env`       | Copies the `.env.example` to a `.env` file.                                                |
 | `yarn lint`      | Runs the linter on `.js(x)` and `.ts(x)` files.                                            |
 | `yarn prettier`  | Runs the prettier on `.js(x)` and `.ts(x)` files.                                          |
 | `yarn start`     | Builds and serves a development version at [http://localhost:8080](http://localhost:8080). |

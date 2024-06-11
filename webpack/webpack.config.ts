@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { resolve } from 'path';
+import { join, resolve } from 'path';
 import { Configuration } from 'webpack';
 import { Configuration as DevelopmentConfiguration } from 'webpack-dev-server';
 import { merge } from 'webpack-merge';
@@ -73,6 +73,9 @@ const config: (
       devServer = {
         historyApiFallback: true,
         port: 8080,
+        static: {
+          directory: join(__dirname, 'example'),
+        },
         watchFiles: [`${SRC_PATH}/**/*`],
       };
       devtool = 'cheap-module-source-map';

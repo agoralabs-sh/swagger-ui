@@ -32,8 +32,6 @@ jobs:
         uses: actions/checkout@v4
       - name: "🧶 Setup Yarn Dependencies"
         uses: ./.github/actions/use-yarn-dependencies
-      - name: "🏗️ Build"
-        run: yarn build
       - name: "🔖 Release"
         env:
           # appears on the release commits

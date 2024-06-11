@@ -30,8 +30,9 @@
   "scripts": {
     "build": "yarn clean && cross-env TS_NODE_PROJECT=\"webpack/tsconfig.json\" webpack --config webpack/webpack.config.ts --env environment=production",
     "clean": "shx rm -rf dist",
+    "env": "cp -u .env.example .env",
     "lint": "eslint . --ext .ts --ext .js",
-    "prepare": "husky install && shx cp -u .env.example .env",
+    "prepare": "husky install && yarn env",
     "prettier": "prettier --config .prettierrc --write \"**/*.{js,json,jsx,ts,tsx}\"",
     "start": "cross-env TS_NODE_PROJECT=\"webpack/tsconfig.json\" webpack serve --config webpack/webpack.config.ts --env environment=development",
     "typecheck": "tsc --noEmit"
