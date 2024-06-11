@@ -36,6 +36,7 @@ jobs:
   build:
     name: "Build"
     needs: install
+    environment: development
     runs-on: ubuntu-latest
     steps:
       - name: "🛎 Checkout"
